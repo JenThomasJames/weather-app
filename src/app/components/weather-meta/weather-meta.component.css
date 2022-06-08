@@ -1,0 +1,18 @@
+.h5{
+    font-size: 25px;
+    color: var(--light);
+}
+.container{
+    background-color: var(--pale-light);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.line{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.line-item{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Weather } from 'src/app/modal/weather.modal';
 import { HttpService } from 'src/app/services/http.service';
 
@@ -10,12 +10,12 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class HomeComponent implements OnInit {
 
-  //weatherData: Weather;
-  weatherData: Weather = new Weather(1, "Broken Clouds", "Chance of Rain", 28.73, 26.3, 24.1, 29, 233, 84, 544, 100, "Bengaluru", "IN");
+  weatherData: Weather;
+  //weatherData: Weather = new Weather(1, "Rainy", "Light Showers", 28, 26.3, 24.1, 29, 233, 84, 544, 100, "Bengaluru", "IN");
 
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService) { }
   ngOnInit() {
-    //this.getDefaultWeather();
+    this.getDefaultWeather();
   }
 
   private getDefaultWeather(): void {
@@ -41,6 +41,12 @@ export class HomeComponent implements OnInit {
         data.sys.country
       );
       console.log(data);
+    });
+  }
+
+  onSearch(location: string) : void{
+    this.httpService.fetchLatitudeAndLongitude(location).subscribe(data => {
+      this.getWeatherData(data[0].lat, data[0].lon);
     });
   }
 }

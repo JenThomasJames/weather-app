@@ -1,0 +1,27 @@
+input {
+    width: 400px;
+    height: 60px;
+    border: none;
+    color: var(--light);
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: #141517;
+    padding: 20px;
+    border: 1px solid var(--pale-light);
+}
+
+.btn {
+    background-color: #141517;
+    border: 1px solid var(--pale-light);
+    color: var(--light);
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: var(--pale-light);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

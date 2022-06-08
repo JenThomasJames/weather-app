@@ -19,4 +19,5 @@ export class HttpService {
   fetchLatitudeAndLongitude(city : string) : Observable<any> {
     return this.http.get(this.rootUrl+"/geo/1.0/direct?q="+city+"&limit=1&appid="+this.apiKey);
   }
+  
 }

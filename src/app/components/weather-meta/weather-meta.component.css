@@ -3,7 +3,7 @@
     color: var(--light);
 }
 .container{
-    background-color: var(--pale-light);
+    background-color: rgba(0, 0, 0, 0.419);
     backdrop-filter: blur(10px);
     border-radius: 20px;
 }

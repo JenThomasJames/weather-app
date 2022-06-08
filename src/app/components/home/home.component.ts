@@ -11,7 +11,7 @@ import { HttpService } from 'src/app/services/http.service';
 export class HomeComponent implements OnInit {
 
   weatherData: Weather;
-  //weatherData: Weather = new Weather(1, "Rainy", "Light Showers", 28, 26.3, 24.1, 29, 233, 84, 544, 100, "Bengaluru", "IN");
+  //weatherData: Weather = new Weather(1, "Rainy", "haze", 28, 26.3, 24.1, 29, 233, 84, 544, 100, "Bengaluru", "IN");
 
   constructor(private httpService: HttpService) { }
   ngOnInit() {

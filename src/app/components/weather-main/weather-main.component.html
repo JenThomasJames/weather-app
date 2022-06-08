@@ -1,8 +1,21 @@
 <div class="basic-weather">
     <p class="h3">{{ weatherData.getCityName() }}, {{weatherData.getCountryCode()}}</p>
     <p class="h1">{{ weatherData.getTemperature() }} &#8451;</p>
-    <p class="h2">{{ weatherData.getWeatherInfo() }}</p>
-    <div class="rainy">
-        <img src="../../../assets/weather-images/24.drop-light.png" alt="" width="100px" height="100px">
+    <p class="h2">{{ weatherData.getWeatherDescription() | titlecase }}</p>
+    <div class="weather-icon">
+        <img *ngIf="weatherData.getWeatherDescription() === 'light showers'" src="../../../assets/weather-images/20.rain-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'heavy rain'" src="../../../assets/weather-images/18.heavy-rain-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'moderate rain'" src="../../../assets/weather-images/20.rain-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'light snow'" src="../../../assets/weather-images/22.snow-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'heavy snow'" src="../../../assets/weather-images/22.snow-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'few clouds'" src="../../../assets/weather-images/15.cloud-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'thunderstorm'" src="../../../assets/weather-images/13.thunderstorm-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'haze'" src="../../../assets/weather-images/21.heavy-wind-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'clouds'" src="../../../assets/weather-images/07.mostly-cloud-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'broken clouds'" src="../../../assets/weather-images/11.mostly-cloudy-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'overcast clouds'" src="../../../assets/weather-images/05.partial-cloudy-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'clear sky'" src="../../../assets/weather-images/01.sun-light.png" alt="" width="100px" height="100px">
+        <img *ngIf="weatherData.getWeatherDescription() === 'scattered clouds'" src="../../../assets/weather-images/15.cloud-light.png" alt="" width="100px" height="100px">
+
     </div>
 </div>
